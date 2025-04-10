@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb ON/OFF</title>
+    <link rel="stylesheet" href="bulb.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Light Bulb ON/OFF</h1>
+        <img id="bulb" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Bulb">
+        <br>
+        <button id="onBtn" onclick="turnOn()">Turn ON</button>
+        <button id="offBtn" onclick="turnOff()">Turn OFF</button>
+    </div>
+
+    <script>
+        function turnOn() {
+            document.getElementById("bulb").src = "https://www.w3schools.com/js/pic_bulbon.gif";
+            document.getElementById("onBtn").disabled = true;
+            document.getElementById("offBtn").disabled = false;
+        }
+
+        function turnOff() {
+            document.getElementById("bulb").src = "https://www.w3schools.com/js/pic_bulboff.gif";
+            document.getElementById("offBtn").disabled = true;
+            document.getElementById("onBtn").disabled = false;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Element</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Click to Replace an Element</h1>
+    <button onclick="replaceElement()">Replace Paragraph</button>
+    <div id="container">
+        <p id="oldPara">This is the original paragraph.</p>
+    </div>
+
+    <script>
+        function replaceElement() {
+            let newPara = document.createElement("p");
+            newPara.textContent = "This is the replaced paragraph!";
+            let oldPara = document.getElementById("oldPara");
+            oldPara.parentNode.replaceChild(newPara, oldPara);
+        }
+    </script>
+</body>
+</html>

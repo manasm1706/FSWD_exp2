@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Element</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Click to Add a New Element</h1>
+    <button onclick="addElement()">Add New Paragraph</button>
+    <div id="container"></div>
+
+    <script>
+        function addElement() {
+            let newPara = document.createElement("p");
+            newPara.textContent = "This is a newly added paragraph.";
+            document.getElementById("container").appendChild(newPara);
+        }
+    </script>
+</body>
+</html>
+

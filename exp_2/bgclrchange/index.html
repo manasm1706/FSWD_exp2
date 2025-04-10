@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+    <link rel="stylesheet" href="background.css">
+</head>
+<body>
+    <div class="clock-container">
+        <div id="clock"></div>
+    </div>
+    <script>
+         function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            document.getElementById('clock').textContent = timeString;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+        function changeColor() {
+            const colors = ["red", "blue", "green", "yellow", "purple", "orange"];
+            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        }
+        setInterval(changeColor, 5000);
+        changeColor();
+    </script>
+</body>
+</html>

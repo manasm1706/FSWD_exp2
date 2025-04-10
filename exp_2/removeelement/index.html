@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Element</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Click to Remove a Paragraph</h1>
+    <button onclick="removeElement()">Remove Last Paragraph</button>
+    <div id="container">
+        <p>This is paragraph A.</p>
+        <p>This is paragraph B.</p>
+        <p>This is paragraph C.</p>
+    </div>
+
+    <script>
+        function removeElement() {
+            let container = document.getElementById("container");
+            if (container.lastElementChild) {
+                container.removeChild(container.lastElementChild);
+            }
+        }
+    </script>
+</body>
+</html>
+
